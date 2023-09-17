@@ -1,0 +1,36 @@
+
+1. What is Emmet?
+Answer: Emmet is a web development tool that simplifies writing code with shorthand notations and abbreviation expansion, boosting productivity for web developers and designers.
+
+
+2. Difference between a Library and Framework?
+Answer: A library is a collection of pre-written functions or modules that can be used to perform specific tasks in an application, while a framework provides a structured architecture and dictates how your application should be structured and behaves, often offering a wider range of features and control.
+
+
+3. What is CDN? Why do we use it?
+Answer: A CDN (Content Delivery Network) is a distributed network of servers that store and deliver web content (e.g., images, scripts, stylesheets) to users from the nearest server location, improving website performance, reliability, and load times by reducing server load and minimizing latency.
+
+
+4. Why is React known as React?
+Answer: React is called "React" because it reflects its core concept of automatically updating the user interface (reacting to changes in data) to ensure a responsive and dynamic web application.
+
+
+5. What is crossorigin in script tag?
+Answer: The "crossorigin" attribute in a script tag specifies whether the browser should enforce cross-origin security policies when loading a script from a different domain.
+
+
+6. What is diference between React and ReactDOM?
+Answer: React is a JavaScript library for building user interfaces, while ReactDOM is a package that provides the necessary tools to render React components in web browsers, making them interact with the DOM (Document Object Model).
+
+
+7. What is difference between react.development.js and react.production.js files via CDN?
+Answer: react.development.js is intended for development and contains additional error-checking and warning messages.
+react.production.js is optimized for production and has these checks removed, resulting in a smaller file size and better performance. Developers use the former during development and switch to the latter for production deployments.
+
+
+8. What is async and defer?
+Answer: async: The script is downloaded asynchronously, allowing it to run while the page continues to load. Order of execution may not be guaranteed.
+
+defer: The script is downloaded in the background and executed after the HTML parsing is complete, maintaining order.
+
+
