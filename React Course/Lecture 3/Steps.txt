@@ -1,0 +1,64 @@
+
+1. npm init
+
+
+2. npm i -D parcel
+
+
+3. npm i react
+
+
+4. npm i react-dom
+
+
+5. npx parcel index.html
+   npx parcel build index.html --> production ke liye
+   "main": "App.js"     --> Not required in production from package.json
+   npx parcel index.html -- https --> https ke liye but chrome not trust
+
+
+
+6. import React from "react";
+   import ReactDOM from "react-dom/client";
+
+
+7. type = "module" in script tag
+
+
+8. add "browserslist" in package.json for making it Compatable to other browsers
+    "browserslist": [
+    "last 2 versions"
+    ]
+
+
+______________________________________________________________________________________________________________________
+
+
+
+* Parcel(Bundler) *
+HMR --> Hot Module Replacement
+File watcher algorithm --> C++
+Creates Server
+Bundling
+Minify
+Cleaning Our Code
+Dev and Production build
+Super fast build algorithm
+Image Optimization
+Caching While development (pehle 512ms lagta hai phir 8ms etc)
+Compression
+Compatable with older version of browser
+HTTPS on dev 
+manages the port number
+Consistent Hashing Algorithm
+Zero Config
+
+
+______________________________________________________________________________________________________________________
+
+
+
+transitive dependencies (ek module dusre se link hota hai)
+dependency tree
+
+

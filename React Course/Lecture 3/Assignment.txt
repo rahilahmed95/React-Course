@@ -1,0 +1,105 @@
+
+1. What is `NPM`?
+Answer: NPM stands for "Node Package Manager." It is a package manager for JavaScript used to install, manage, and share reusable code libraries and packages.
+
+
+2. What is `Parcel/Webpack`? Why do we need it?
+Answer: Parcel: It's a web application bundler that simplifies the build process. It automatically handles tasks like code splitting, minification, and asset optimization without requiring extensive configuration.
+
+Webpack: It's a highly configurable module bundler. It allows developers to bundle various assets, like JavaScript, CSS, and images, into a single package. Webpack provides great flexibility but may require more configuration.
+
+these tools optimize and bundle web assets, making our websites faster and more efficient for users. They help manage dependencies, improve code organization, and ensure compatibility across browsers, ultimately enhancing the development workflow and user experience.
+
+
+3. What is `.parcel-cache`
+Answer: .parcel-cache is a directory created by the Parcel bundler to store cached and intermediate build files. It helps speed up the build process by reusing previously generated assets and dependencies, reducing the time required to rebuild a project when changes are made.
+
+
+4. What is `npx` ?
+Answer: npx is a command-line tool that comes with npm. It allows you to run Node.js packages and executables directly without having to install them globally or locally. It's commonly used for running one-off commands or tools from packages without the need for manual installation.
+
+
+5. What is difference between `dependencies` vs `devDependencies`
+Answer: dependencies are packages required for the application to run in production.
+
+devDependencies are packages used during development, such as testing frameworks or build tools, but not needed for the production runtime.
+
+
+6. What is Tree Shaking?
+Answer: Tree shaking is a technique in JavaScript build tools like Webpack that eliminates unused code (functions, variables, and modules) from the final bundle. It helps reduce the size of the bundled code, improving load times and overall performance.
+
+
+
+7. What is Hot Module Replacement?
+Answer: Hot Module Replacement (HMR) is a development feature in build tools like Webpack. Same as Live Server
+
+
+8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+Answer:
+HMR (Hot Module Replacement)
+File watcher algorithm
+Creates Server
+Bundling
+Minify
+
+Effortless Code Splitting: Parcel enables easy code splitting, breaking your code into smaller files for optimized loading without complex setup.
+
+Fast Development Server: Parcel comes with a built-in development server that provides live reloading and HMR for a seamless development experience.
+
+Zero Configuration: Parcel requires minimal to no configuration, making it beginner-friendly and speeding up project setup.
+
+
+
+9. What is `.gitignore`? What should we add and not add into it?
+Answer: .gitignore is a file used in Git to specify which files and directories should be ignored and not tracked by the version control system.
+
+add all the files except node modules, parcel cache, dict
+
+
+10. What is the difference between `package.json` and `package-lock.json`
+Answer: package.json:
+
+Contains metadata about the project.
+Lists project dependencies and their specified versions and it updates the version automatically
+
+package-lock.json:
+
+Provides a detailed, locked-down dependency tree with exact versions.
+
+
+
+11. Why should I not modify `package-lock.json`?
+Answer: Modifying it could lead to dependency conflicts and inconsistencies, potentially breaking your project's dependencies and making it harder to reproduce builds accurately.
+
+
+12. What is `node_modules` ? Is it a good idea to push that on git?
+Answer: It is very heavy in size and it can easily created by using npm i command from the terminal
+
+
+13. What is the `dist` folder?
+Answer: The `dist` folder, short for "distribution," typically contains the final, optimized, and production-ready version of your project's code. It's often used for deployment and should include files that are ready to be served to users, such as minified JavaScript, CSS, and HTML files.
+
+
+14. What is `browserlists`?
+Answer: browserslist is a configuration file which browsers and their versions your web application should support for compatibility and automatic code transformations.
+
+
+15. Read about dif bundlers: vite, webpack, parcel?
+Answer:  Vite: Vite is a build tool that focuses on fast development and optimized production builds. It leverages native ES modules for speed and comes with a built-in development server. It's particularly well-suited for modern web development with Vue.js and React.
+
+Webpack: Webpack is a highly configurable and widely used build tool for JavaScript applications. It bundles assets, optimizes code, and offers extensive customization through loaders and plugins. It's versatile but may require more configuration.
+
+Parcel: Parcel is a beginner-friendly web application bundler known for its zero-configuration setup. It automates many tasks, like asset handling and code splitting, making it easy to get started with web development.
+
+
+
+16. Read about: ^ - caret and ~ - tilda?
+Answer: ^ (Caret): In package.json, it allows updates to the package up to the next major version. For example, ^1.2.3 means you can update to any 1.x.x version.
+
+~ (Tilde): In package.json, it allows updates to the package up to the next minor version. For example, ~1.2.3 means you can update to any 1.2.x version, but not 1.3.x.
+
+
+17. Read about Script types in html (MDN Docs)
+Answer: type="module" is an attribute used in HTML <script> tags to indicate that the linked JavaScript file is an ES6 module. It allows you to use modern JavaScript module features like import and export in your code.
+
+
