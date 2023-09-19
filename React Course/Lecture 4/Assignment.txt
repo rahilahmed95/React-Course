@@ -1,0 +1,31 @@
+
+1. What is JSX?
+Answer: JSX is a JavaScript syntax extension for building user interfaces, commonly used with React to describe the structure and appearance of web components.
+
+
+2. Superpowers of JSX?
+Answer: 
+a) Combines HTML-like syntax with JavaScript.
+b) Provides readability and expressiveness for UI components.
+c) Enables dynamic data rendering.
+d) Supports component composition.
+e) Enhances error checking and debugging.
+
+
+3. Role of type attribute in script tag? What options can I use there?
+Answer: The type attribute in the <script> tag specifies the scripting language used within the script block. Common values are:
+
+type="text/javascript" (default): JavaScript code.
+type="module": Indicates the script is an ECMAScript module.
+type="text/python": For Python code when using transpilers like Skulpt.
+type="text/php": For PHP code within HTML files (not recommended).
+
+
+4. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+Answer: {TitleComponent}: Renders the TitleComponent without using JSX syntax.
+
+{<TitleComponent/>}: Renders the TitleComponent using JSX self-closing syntax.
+
+{<TitleComponent></TitleComponent>}: Renders the TitleComponent using JSX open and close tags, which is less common but valid.
+
+

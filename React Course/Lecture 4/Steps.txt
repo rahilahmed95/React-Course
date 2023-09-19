@@ -1,0 +1,71 @@
+
+1. npm init
+
+2. npm i -D parcel
+
+3. npm i react
+
+4. npm i react-dom
+
+5. npx parcel index.html
+   npx parcel build index.html --> production ke liye
+   "main": "App.js"     --> Not required in production from package.json
+   npx parcel index.html -- https --> https ke liye but chrome not trust
+
+6. import React from "react";
+   import ReactDOM from "react-dom/client";
+
+7. type = "module" in script tag
+
+8. add "browserslist" in package.json for making it Compatable to other browsers
+    "browserslist": [
+    "last 2 versions"
+    ]
+
+9. update from package.json
+   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+   },
+   then do npm run start
+   shortcut --> npm start
+
+
+10. npm install babel-plugin-transform-remove-console --save-dev --> used to remove all the console
+   create .babelrc and add the code according to the documentation
+   i.e. {
+    "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+   }
+
+11. whenever use [heading1, heading2] i.e. childrens provide them key to remove the warnings
+
+12. Always name component with Capitalize letter
+
+13. React element --> root.render(heading)
+    React Component --> root.render(<HeaderComponent />);
+    We can use react element in the component using {heading}
+    functional component --> <Title /> or {Title()}
+
+14. any javascript code can be written in {} in the component 
+
+
+
+
+
+
+______________________________________________________________________________________________________________________
+
+1. What is a Component Composition?
+Answer: When one component is used inside another component it is known as Component Composition.
+
+
+
+
+
+
+
+
+
+
+
