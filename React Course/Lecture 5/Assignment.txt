@@ -1,0 +1,70 @@
+
+1. Is JSX mandatory for React?
+Answer: No, JSX is a recommended and commonly used syntax in React, but it is not mandatory. You can use plain JavaScript to create React components, but JSX makes it more concise and readable.
+
+
+2. Is ES6 mandatory for React?
+Answer: ES6 is not mandatory for React, but it is highly recommended and commonly used because it provides many features and improvements that make React development easier and more efficient.
+
+
+3. {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+Answer: {TitleComponent}: Renders the TitleComponent without any additional elements or props.
+
+{<TitleComponent/>}: Renders the TitleComponent as a self-closing element.
+
+{<TitleComponent></TitleComponent>}: Renders the TitleComponent with explicit opening and closing tags.
+
+
+4. How can I write comments in JSX?
+Answer: You can write comments in JSX using curly braces and /* */ for multi-line comments or {/* */} .
+
+
+5. What is <React.Fragment></React.Fragment> and <></> ?
+Answer: <React.Fragment></React.Fragment> is the long-form syntax for creating fragments.
+
+<> </> (or <> and </>) is the shorthand syntax introduced in React 16.2 for the same purpose.
+
+
+6. What is Virtual DOM?
+Answer: The Virtual DOM is a virtual representation of the real web page's structure. React uses it to optimize updates and improve performance by reducing direct manipulation of the actual web page.
+
+
+7. What is Reconciliation in React?
+Answer: Reconciliation in React refers to the process of updating the actual DOM to match changes made to the Virtual DOM, ensuring that the user interface reflects the latest application state.
+
+
+
+8. What is React Fiber?
+Answer: React Fiber is a major internal rewrite of the React library's core algorithm. It was designed to improve performance and enable asynchronous rendering, making React more responsive and efficient for complex user interfaces.
+
+
+9. Why we need keys in React? When do we need keys in React?
+Answer: Keys in React are used to help React identify and track individual elements in a list of components. They are needed when rendering dynamic lists or collections of elements to ensure proper rendering and efficient updates. Keys help React know which elements have changed, been added, or been removed, reducing unnecessary DOM manipulation and improving performance.
+
+
+10. Can we use index as keys in React?
+Answer: Yes, you can use the index as keys in React, but it's generally not recommended for dynamic lists with items that can change or be reordered. It's better to use a stable and unique identifier as keys whenever possible to avoid potential issues with component reordering or updates.
+
+
+11. What is props in React? Ways to
+Answer: Props (short for "properties") in React are a way to pass data from parent to child components. They are a mechanism for communication and can be used to customize and configure child components.
+
+Ways to pass props in React:
+
+Directly in JSX: <Component prop1={value1} prop2={value2} />
+Spread operator: <Component {...propsObject} /> to pass a whole object.
+Functional components: As arguments to a functional component.
+Using defaultProps: Setting default values for props.
+
+
+
+12. What is a Config Driven UI ?
+Answer: A Config-Driven UI is a design approach where the user interface (UI) is defined and customized through configuration files or data, rather than hardcoding it in the application's code. This allows for more flexibility and easier changes to the UI without requiring code modifications, making it highly adaptable to different use cases and requirements.
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.navbar img {
+  height: 70px;
+}
+
+.navlist {
+  display: flex;
+  list-style: none;
+}
+
+.navlist li {
+  padding: 10px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Products img{
+  width: 100%;
+}
+
+.card{
+  width: 250px;
+  margin: 15px;
+  border: 1px solid black;
+}
+
+.card-details{
+  padding-left: 10px;
+}
