@@ -1,0 +1,32 @@
+
+1. make src folder
+
+2. make component folder
+
+3. export component 
+    export default Title;   --> we can export only one thing using default
+    import Title from "./component.Title"       --> default import 
+
+    export const Title
+    import {Title} from "./component/Title"     --> Named Import
+
+    export const Title
+    export default Header
+    import Header , {Title} from "./component/Header"
+
+    export const Title
+    export const Header
+    import * as XYZ from "./component/Header"
+    <XYZ.Header />
+
+    
+4. make a config.js file in src and save all the hardcore data 
+
+
+
+
+
+
+
+
+
