@@ -1,0 +1,56 @@
+
+1. What is a Microservice?
+Answer: A microservice is a small, independent, and modular component of a web application that performs a specific function. It's part of a larger architectural approach where the application is divided into multiple such services, each running separately and communicating with others to build the overall application's functionality. This approach enhances scalability, maintainability, and flexibility in web development.
+
+
+2. What is Monolith architecture?
+Answer: Monolith architecture is a traditional web development approach where an entire application is built as a single, interconnected unit. All components and functionalities are tightly integrated, making it less flexible and harder to scale compared to more modular approaches like microservices.
+
+
+3. What is the difference between Monolith and Microservice?
+Answer: Monolith is a single, interconnected application, while Microservices is an architectural approach where the application is divided into small, independent services that communicate to form the whole system. Monolith is simpler but less scalable, while Microservices offers more flexibility and scalability but is more complex to manage.
+
+
+
+4. Why do we need a useEffect Hook?
+Answer: The useEffect hook in React is used to perform side effects in functional components, such as data fetching, DOM manipulation, or subscriptions, after the component has rendered. It's necessary to manage asynchronous tasks and prevent infinite render loops in React applications.
+
+
+
+5. What is Optional Chaining?
+Answer: Optional chaining is a JavaScript feature that allows you to access properties or call methods on an object without worrying if the object or its intermediate properties are null or undefined. It uses the ?. syntax to safely navigate object structures and avoids runtime errors.
+
+
+
+6. What is Shimmer UI?
+Answer: Shimmer UI is a placeholder loading animation used in user interfaces to indicate that content is loading. It typically consists of animated, shimmering lines or placeholders that mimic the appearance of content while data is being fetched, creating a smoother user experience.
+
+
+
+7. What is the difference between JS expression and JS statement?
+Answer: A JavaScript expression produces a value and can be used within other expressions, while a JavaScript statement performs an action and does not produce a value. Expressions can be part of statements.
+
+
+
+8. What is Conditional Rendering, explain with a code example?
+Answer: Conditional rendering in web development involves displaying different content or components based on certain conditions
+Login and logout toggle is the example
+
+
+
+9. What is CORS?
+Answer: CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers that controls which web pages can make requests to a different domain (origin) than the one that served the web page. It helps prevent potentially malicious cross-origin requests and ensures data security.
+
+
+
+10. What is async and await?
+Answer: async: It is used to declare a function as asynchronous, meaning it will always return a Promise. Async functions allow you to write asynchronous code that looks more like synchronous code.
+
+await: It is used inside an async function to pause the execution of the function until a Promise is resolved. It is typically used when calling functions or making API requests that return Promises to wait for their results before proceeding with code execution.
+
+
+
+11. What is the use of `const json = await data.json();` in getRestaurants()
+Answer: It will make the response came from the API in the readable manner i.e. json format
+
+
