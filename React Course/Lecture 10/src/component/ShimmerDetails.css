@@ -1,0 +1,25 @@
+.shimmer-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shimmer-image {
+  width: 305px;
+  height: 180px;
+  background-color: gray;
+  opacity: 0.3;
+}
+
+.shimmer-details {
+  width: 305px;
+  height: 286px;
+}
+
+.shimmer-details p {
+  height: 20px;
+  background-color: gray;
+  opacity: 0.3;
+  margin-top: 10px;
+}

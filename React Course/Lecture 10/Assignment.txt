@@ -1,0 +1,46 @@
+
+
+1. How do you create Nested Routes react-router-dom cofiguration?
+Answer: Using children element
+
+
+
+2. Read abt createHashRouter, createMemoryRouter from React Router docs.
+Answer: createHashRouter: This router is used for hash-based routing. It uses the URL fragment identifier (e.g., /#/route) to manage routing. It's suitable for single-page applications (SPAs) and is often used in older browser environments where HTML5 History API isn't well supported.
+
+createMemoryRouter: This router doesn't rely on the browser's URL. It's useful for server-side rendering (SSR) or testing environments. Routes and navigation are managed in memory, making it versatile for non-browser scenarios.
+
+
+
+3. What is the order of life cycle method calls in Class Based Components
+Answer: constructor: Called when the component is created, initializes state and binds methods.
+
+render: Renders the component's UI based on its current state and props.
+
+componentDidMount: Called after the component is inserted into the DOM, used for side effects like data fetching.
+
+componentWillMount (deprecated): Called just before the component is inserted into the DOM.
+
+componentWillUpdate (deprecated): Called just before re-rendering.
+
+
+
+4. Why do we use componentDidMount?
+Answer: We use componentDidMount in React class components to perform side effects or actions that require access to the DOM or external data after the component has been rendered and added to the DOM.
+
+
+
+5. Why do we use componentWillUnmount? Show with example
+Answer: We use componentWillUnmount in React class components to perform cleanup tasks or unsubscribe from resources when the component is about to be removed from the DOM. 
+
+
+
+6. (Research) Why do we use super(props) in constructor?
+Answer: We use super(props) in a class constructor to call the constructor of the parent class (i.e., React.Component) and pass props to it, ensuring that props are properly initialized in the component.
+
+
+
+7.Why can't we have the callback function of useEffect async?
+Answer: async functions implicitly return a promise, and useEffect expects its callback to either return nothing or a clean-up function. 
+
+

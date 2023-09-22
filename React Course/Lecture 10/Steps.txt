@@ -1,0 +1,151 @@
+
+1. we can create children of children element
+
+
+2. path: "/profile"     --> localhost:1234/profile
+   path: "profile"      --> localhost:1234/about/profile
+
+
+3. "/"  --> this means from the root
+    and hence we use "profile" in the children's children route
+
+
+4. children must be call in the outlet
+
+
+5. class Profile extends React.Component{
+    render(){
+        return(
+
+        )
+    }
+}
+
+export default Profile;
+
+
+
+6. we can use props in class based Component --> {this.props.name}
+
+
+7. constructor(props){          // Best place to create state --> it renders first
+    super(props);
+    // create state here
+    this.state = {
+        count: 0,
+        count2: 0,          // handle multiple State
+    }
+}
+
+<h2>Count: {this.state.count}</h2>
+
+we can destructure also
+
+
+
+8. setState
+onClick{()=> {
+    this.setState({
+        count: 1,
+        count2: 2,
+    })
+}}
+
+
+
+9. first constructor is called in class based 
+   then its render
+
+
+
+10. componentDidMount(){
+    // Best place to Api Call
+}
+constructor > render > componentDidMount    (calling sequence)
+
+
+
+11. Life cycle between parent and 1 child
+    parent  --> constructor
+    parent  --> render
+        child   --> constructor
+        child   --> render
+        child   -->  componentDidMount
+    parent  -->  componentDidMount
+
+
+
+
+12. Life cycle between parent and 2 child
+    parent  --> constructor
+    parent  --> render
+        First child   --> constructor
+        First child   --> render
+        Second child   --> constructor
+        Second child   --> render
+        First child   -->  componentDidMount
+        Second child   -->  componentDidMount
+    parent  -->  componentDidMount
+
+There are 2 phases in the life cycle --> render phase and commit phase
+    render phase --> constructor and render
+    commit phase --> componentDidMount
+
+
+
+13. async componentDidMount(){
+    const data = await fetch("https://api.github.com/users/{username}");
+}
+
+
+
+14. while using async componentDidMount
+    parent --> constructor
+    parent --> render
+    child  --> constructor
+    child  --> render
+    parent  --> componentDidMount
+    child  --> logs
+    child  --> componentDidMount
+
+
+
+
+15. componentDidMount --> for first render
+    componentDidUpdate --> for every render
+    componentWillUnmount --> after Unmounting
+
+
+
+16. useEffect on every change of the count
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.count !=== prevState.count){
+            console.log("Hello");
+        }
+    }
+
+
+
+17. componentDidMount(){                    // it will print after every 1sec even after changing the path
+    this.timer  = setInterval(()=>{         // and hence we use componentWillUnmount to clear
+        console.log("Hello")
+    }, 1000)
+}
+
+componentWillUnmount(){
+    clearInterval(this.timer);
+}
+
+
+
+18. useEffect(()=>{
+    const timer = setInterval(()=>{
+        console.log("Hello")
+    }, 1000)
+
+    return()=>{
+        clearInterval(timer);
+    }
+}, [])
+
+
