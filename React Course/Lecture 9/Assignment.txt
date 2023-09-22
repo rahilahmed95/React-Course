@@ -1,0 +1,39 @@
+
+1. What are various ways to add images into our App? Explain with code examples
+Answer: 
+Importing images directly in your JavaScript/JSX code:
+<img src={logo} alt="Logo" />
+
+Using require to load images:
+const logo = require('./logo.png').default;
+
+Public folder approach (for static assets):
+<img src="/logo.png" alt="Logo" />
+
+
+
+2. What would happen if we do console.log(useState())?
+Answer: [initialState, function]
+initialState is the current state value.
+function is a function you can use to update the state.
+
+
+
+3. How will useEffect behave if we don't add a dependency array ?
+Answer: If you don't add a dependency array to the useEffect hook, it will run on every render of the component, causing the effect code inside it to execute every time the component re-renders. This can lead to potential performance issues and unexpected behavior, especially if your effect updates the component's state, as it can create an infinite loop of re-renders. It's essential to specify dependencies to control when the effect should run.
+
+
+
+4. What is SPA?
+Answer: SPA stands for Single Page Application. It's a web application or website that loads and operates within a single web page. SPAs use AJAX and dynamically update the content on the page without requiring a full page reload. This approach provides a smoother and more responsive user experience by minimizing the need for server requests and full page reloads.
+
+
+
+5. What is difference between Client Side Routing and Server Side Routing?
+Answer: Client-Side Routing: Routing is handled by the client (browser), and page transitions occur without full page reloads. It's common in Single Page Applications (SPAs) and is more interactive but can initially load a lot of JavaScript.
+
+Server-Side Routing: Routing is handled by the server, and each route triggers a new server request, resulting in full page reloads. It's traditional for standard websites and is SEO-friendly but less interactive.
+
+
+
+

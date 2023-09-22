@@ -1,0 +1,103 @@
+
+1. useEffect with no dependency --> call everytime when render
+
+
+2. never make component inside a component --> make at the top level of the file
+
+
+3. never use UseState hook in if-else and for loop statement because it leads to inconsistency
+
+
+4. don't call UseState outside the functional component
+
+
+5. make a assets folder in the src to store the images
+
+
+6. npm i react-router-dom
+
+
+7. import {createBrowserRouter , RouterProvider} from "react-router-dom"
+    const appRouter = createBrowserRouter([
+        {
+            path: "/",
+            element: <AppLayout />,
+            errorElement : <Error />
+        },
+        {
+            path: "/about",
+            element: <About />
+        },
+    ])
+
+
+8. root.render(<RouterProvider router={appRouter} />)
+
+
+9. handle 404 not found page ("/" --> ispey hi errorElement daalna hai sab pey reflect hojayega)
+
+
+10. import {useRouteError} from "react-router-dom" in the Error component
+    const err = useRouteError();
+
+
+11. there are 2 types of routing --> client side server side routing
+
+
+12. import link from "react-router-dom"
+    <Link to="/about">
+        About
+    </Link>
+
+
+
+13. const AppLayout = () => {
+    return(
+        <div>
+            <Header />
+            <Body />        // when "/"
+            <About />       // when "/about"
+            <Footer />
+        </div>
+    )
+}
+
+
+const appRouter = ([
+    {
+        path: "/",
+        element: <AppLayout />,
+        errorElement: <Error />,
+        children: [
+            {
+                path : "/about",
+                element: <About />
+            }
+        ]
+    }
+])
+
+
+
+14. import Outlet from "react-router-dom"
+    const AppLayout = () => {
+    return(
+        <div>
+            <Header />
+            <Outlet/>
+            <Footer />
+        </div>
+    )
+}
+
+Now, All the childrens will go into outlet
+
+
+
+15. restraunt/:id --> dynamic segment
+
+
+16. useParams --> const param = useParams();
+    console.log(param)  --> id: 1234
+
+
