@@ -1,0 +1,23 @@
+
+1. Explore all the ways of writing css.
+Answer: Done
+
+
+2. How do we configure tailwind?
+Answer: Refer tailwind documentation
+
+
+3. In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+Answer: theme: Customize core design tokens like colors, fonts, and spacing.
+
+extend: Add new utilities or modify existing ones.
+
+plugins: Enable and configure third-party or custom plugins.
+
+content: Specify files or content to scan for Tailwind CSS classes (useful with JIT mode).
+
+
+4. Why do we have .postcssrc file?
+Answer: A .postcssrc file is used to configure PostCSS, a tool for processing and transforming CSS. It allows you to set up PostCSS plugins and options for your project.
+
+

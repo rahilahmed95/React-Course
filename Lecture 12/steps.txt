@@ -1,0 +1,33 @@
+
+1. Inline CSS is a heavy task for Browser
+
+2. CSS Frameworks are easy to use but it restricts use
+
+3. ways of styling
+   a. Native CSS
+   b. SCSS and SASS
+   c. Inline CSS
+   d. Component Design - Material UI, Ant, Base UI, Chakra
+   e. Styled Component
+   f. Tailwind
+
+
+4. pros of Tailwind CSS
+    - CSS on the go
+    - resusability
+    - less bundle size
+    - flexible UI (Custmizable)
+
+
+5. Just include the cdn link of Tailwind and GO FOR IT (not a good way)
+
+
+6. use npm to install Tailwind (npm install -D tailwindcss postcss)
+   npx tailwindcss init
+
+
+7. postcss converts tailwindcss into normal CSS
+
+
+8. when extension doesn't work use ctr + spacebar
+
