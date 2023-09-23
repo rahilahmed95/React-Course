@@ -1,0 +1,123 @@
+
+1. save all the helper functions in the utils folder(utils.js) inside the src like filterData
+   It makes our code reusable
+
+    export function filterData(){
+
+    }
+
+
+2. make new hook with start name use... in the utils
+
+
+3. const restraunt = useRestraunt(resId);
+
+
+4. import useState from "react"
+
+const useRestraunt = (resId) => {
+    const [restraunt, setRestraunt] = useState(null);
+
+    useEffect(() => {
+        fetchData()
+    }, []);
+
+    async function fetchData(){
+        try{
+            const response = await fetch("url");
+            const data = await response.json();
+            setRestraunt(data);
+        }
+        catch(err){
+            console.log(err);
+        }
+    }
+    return restraunt;
+}
+
+
+
+
+5. import {useState} from "react"
+
+const useOnline = () => {
+
+    const [isOnline, setIsOnline] = useState(true);
+
+    useEffect(() => {
+        window.addEventListner("online", () => {
+            setIsOnline(true);
+
+        window.addEventListner("offline", () => {
+            setIsOnline(true);
+        })
+    }, [])
+
+    return isOnline
+}
+
+
+const offline = useOnline;
+
+
+
+
+6. It is always a good practice to clear all the eventListner etc things
+
+
+
+7. import {useState} from "react"                   // Senior developer code
+
+const useOnline = () => {
+
+    const [isOnline, setIsOnline] = useState(true);
+
+    useEffect(() => {
+
+        const handleOnline = () => {
+            setIsOnline(true);
+        }
+        window.addEventListner("online", handleOnline);
+
+        const handleOffline = () => {
+            setIsOnline(true);
+        }
+
+        window.addEventListner("offline", handleOffline})
+
+        return (() => {
+            window.removeEventListner("online", handleOnline);
+            window.removeEventListner("offline", handleOffline);
+        })
+    }, [])
+
+    return isOnline
+}
+
+
+
+
+8. make useLocalStorage custom hook
+
+
+9. We do chunking / code splitting / dynamic bundling / lazy loadings / On Demand Loading / Dynamic Import to make a production ready app
+
+
+10. const Instamart = lazy(() => import("./component/Instamart"));
+    import {lazy} fro, "react"
+    // Upon on Demand Loading --> Upon render --> suspend loading
+
+
+
+11. import {lazy, Suspense}
+    <Suspense fallback={<Shimmer/>} >
+        <Instamart/>
+    <Suspense/> 
+
+
+
+12. never do dynamic importing in the component
+
+
+
+
