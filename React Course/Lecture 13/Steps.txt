@@ -1,0 +1,153 @@
+
+1. There are 2 layers in web app i.e. UI layer and Data layer
+
+
+2. state --> local variable
+   props --> we pass from one component to another component
+
+
+3. In App.js                                [Props Drilling --> Jo use nhi karra woh part bhi phirse render hoga]
+   const [user, setUser] = useState({       [On change of the state]
+    name: "Rahil Ahmed",
+    email: "rahilahmed@gmail.com"
+   })
+
+   <Body user={user} />
+   Body = ({user}) =>{
+
+   }
+
+   further do same procedure 
+
+
+4. Check in the inspect --> react developer tool
+
+
+5. const section = ({title, description}) => {
+    return(
+        <di>
+            <h1>{title}</h1>
+            <p>{description}</p>
+        </di>
+    )
+}
+
+const Instamart = () => {
+    return(
+        <div>
+            <section title={"About Us"}, description={"This is About Page"} />
+        </div>
+    )
+}
+
+
+6. const section = ({title, description}) => {
+    const [isVisible, setIsVisible] = useState(false);
+    return(
+        <div>
+            <h1>{title}</h1>
+            {
+                isVisible ? <button onClick{()=>setIsVisible(false)}>Hide</button> : 
+                <button onClick{()=>setIsVisible(true)}>Show</button>
+            }
+            {
+                isVisible && <p>{description}</p>
+            }
+        </div>
+    )
+}
+
+
+7. We are going to make a collapsed Accordion
+   We can't change the state of siblings so we will make a state in the parent      (props lifting) 
+
+
+
+8. const section = ({title, description, isVisible, setIsVisible}) => {             (Bad Method)
+    return(
+        <div>
+            // Same as above
+        </div>
+    )
+}
+
+const Instamart = () => {
+    const [sectionConfig, setSectionConfig] = useState({
+        About: false,
+        team: false,
+        career: false
+    })
+
+    return(
+        <div>
+            <section isVisible={sectionConfig.About} setIsVisible= />
+        </div>
+    )
+}
+
+
+
+9. const Instamart = () => {
+    const [VisibleSection, setVisibleSection] = ("about")
+
+    isVisible={VisibleSection === "about"}
+    setIsVisible{() => setVisibleSection("about")}
+}
+
+
+
+10. See the Profiler feature of react dev tools
+
+
+11. We want a user data in every component --> doing props Drilling is Bad way
+    We will use React Context  --> Kind of large storage
+
+
+
+12. create a context in a utils folder  --> UserContext.js
+
+    import {createContext} from "react"
+    const UseContext = createContext({
+        user : {
+            name: "Dummy Name",
+            email: "dummy@gmail.com"
+        }
+    })
+    export default UseContext
+
+
+    import {useContext} from "react"
+    const {user} = useContext(UserContext);
+
+    Now we can use it
+
+
+13. In class based component
+    import useContext from "./utils/useContext"
+
+    <UseContext.Consumer>
+        {({user}) => <h2>{user.name}</h2>}
+    </UseContext.Consumer>
+
+
+
+14. const[user, setUser] = useState({
+    name: "rahil",
+    email: "rahilahmed@gmail.com"
+})
+
+<useContext.Provider value = {user, setUser}>
+    <Header >/
+    <Outlet >/
+    <Footer >/
+</useContext.Provider>
+
+
+15. make a input field to change the context data every where in the website
+
+
+
+16. we can name our context to see in the dev tool
+    UseContext.displayName = "UseContext"
+
+
